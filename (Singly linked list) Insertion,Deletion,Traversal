@@ -1,4 +1,4 @@
-# Insertion,Deletion,Traversal
+#Write a program to implement singly linked list with Insertion,Deletion,Traversal
 
 #Q] Insertion
 class Node:
