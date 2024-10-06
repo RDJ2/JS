@@ -39,7 +39,6 @@ dllist.listprint(dllist.head)
 
 
 #Q] deletion
-
 import gc
 class Node:
     def __init__(self, data):
