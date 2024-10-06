@@ -1,0 +1,138 @@
+#Q] write a program to implement Abstract data type(ADT)
+
+#1]Stack
+from sys import maxsize 
+def createStack():
+    stack = []
+    return stack
+def isEmpty(stack):
+    return len(stack) == 0
+def push(stack, item):
+    stack.append(item)
+    print(item + " pushed to stack ")
+def pop(stack):
+    if (isEmpty(stack)):
+        return str(-maxsize -1)
+    return stack.pop()
+stack = createStack()
+push(stack, str(10))
+push(stack, str(20))
+push(stack, str(30))
+print(pop(stack) + " popped from stack")
+
+
+
+#Q]Stack ADT using list
+
+stack = []
+stack.append('a')
+stack.append('b')
+stack.append('c')
+print('Initial stack')
+print(stack)
+print('\nElements popped from stack:')
+print(stack.pop())
+print(stack.pop())
+print(stack.pop())
+print('\nStack after elements are popped:')
+print(stack)
+
+
+
+
+
+#Q]Implementation stack ADT using a singly linked list
+
+class Node:
+    def __init__(self, value):
+        self.value = value
+        self.next = None
+
+class Stack:
+    def __init__(self):
+        self.head = Node("head")
+        self.size = 0
+
+    def __str__(self):
+        cur = self.head.next
+        out = ""
+        while cur:
+            out += str(cur.value) + "->"
+            cur = cur.next
+        return out[:-3]
+
+    def getSize(self):
+        return self.size
+
+    def isEmpty(self):
+        return self.size == 0
+
+    def peek(self):
+        if self.isEmpty():
+            raise Exception("Peeking from an empty stack")
+        return self.head.next.value
+
+    def push(self, value):
+        node = Node(value)
+        node.next = self.head.next
+        self.head.next = node
+        self.size += 1
+
+    def pop(self):
+        if self.isEmpty():
+            raise Exception("Popping from an empty stack")
+        remove = self.head.next
+        self.head.next = self.head.next.next
+        self.size -= 1
+        return remove.value
+
+if __name__ == "__main__":
+    stack = Stack()
+    for i in range(1, 11):
+        stack.push(i)
+    print(f"Stack: {stack}")
+    for _ in range(5):  # corrected range from 1 to 5
+        remove = stack.pop()
+        print(f"Pop: {remove}")
+    print(f"Stack: {stack}")
+
+
+
+
+
+#Q]Demonstraction of queue implementation using list
+
+queue = []
+ 
+queue.append('a')
+queue.append('b')
+queue.append('c')
+ 
+print("Initial queue")
+print(queue)
+ 
+print("\nElements dequeued from queue")
+print(queue.pop(0))
+print(queue.pop(0))
+print(queue.pop(0))
+ 
+print("\nQueue after removing elements")
+print(queue)
+
+
+
+
+#Q]Declaring a list with interger & string element
+
+list = [10, 20, 30, "New Delhi", "Mumbai"]
+print("List elements are: ", list)
+list.append (40)
+list.append (50)
+list.append ("Chennai")
+print ("List elements: ", list)
+list.pop () ;
+print ("List elements: ", list)
+list.pop () ;
+print ("List elements: ", list)
+
+
