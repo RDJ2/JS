@@ -23,7 +23,6 @@ print(pop(stack) + " popped from stack")
 
 
 #Q]Stack ADT using list
-
 stack = []
 stack.append('a')
 stack.append('b')
@@ -42,7 +41,6 @@ print(stack)
 
 
 #Q]Implementation stack ADT using a singly linked list
-
 class Node:
     def __init__(self, value):
         self.value = value
@@ -101,7 +99,6 @@ if __name__ == "__main__":
 
 
 #Q]Demonstraction of queue implementation using list
-
 queue = []
  
 queue.append('a')
@@ -123,7 +120,6 @@ print(queue)
 
 
 #Q]Declaring a list with interger & string element
-
 list = [10, 20, 30, "New Delhi", "Mumbai"]
 print("List elements are: ", list)
 list.append (40)
